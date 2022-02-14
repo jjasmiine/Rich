@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,300&display=swap');
+
+:root{
+    --border-color: #e3e5e4;
+    --background-color: rgba(91, 74, 110, 0.329);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image: linear-gradient(#19194d,  #0c0c27 );
+    height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+button{
+    border: none;
+    background: none;
+    text-align: center;
+    font-size: .938rem;
+    color: #fff;
+}
+
+.main{
+    text-align: center;
+    margin: 2rem 0 1rem;
+}
+
+.draggable__list{
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1rem;
+    list-style: none;
+    background-color: var(--background-color);
+}
+
+.draggable__list li{
+   display: flex;
+   flex: 1;
+}
+
+/*all but the first*/
+.draggable__list li:not(:first-of-type){
+    margin-top: 1.5rem;
+}
+
+.draggable__list .number{
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    height: 60px;
+    width: 60px;
+}
+
+.draggable__list li.over .draggable{
+    background-color: rgba(0, 0, 0, 0.315);
+}
+
+.draggable__list .person-name{
+    margin: 0 20px 0 0;
+}
+
+.draggable__list li.right .person-name{
+    color: greenyellow;
+}
+
+.draggable__list li.wrong .person-name{
+    color: red;
+}
+
+.draggable{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex: 1;
+}
+
+.title{
+    margin-bottom: .5rem;
+}
+
+.check-btn{
+    background-color: var(--background-color);
+    margin: 1.5rem 0 5rem;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.check-btn:hover{
+    background-color: rgba(91, 74, 110, 0.158);
+}
+
+.check-btn:active{
+    transform: scale(0.98);
+}
